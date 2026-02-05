@@ -53,7 +53,7 @@ function SocialIcon({ name }: { name: string }) {
   const icons: Record<string, ReactNode> = {
     github: (
       <img
-        src="https://api.iconify.design/mdi:github.svg?color=%23000000"
+        src="https://api.iconify.design/mdi:github.svg?color=%23ffffff"
         alt="GitHub"
         width="24"
         height="24"
@@ -61,7 +61,7 @@ function SocialIcon({ name }: { name: string }) {
     ),
     linkedin: (
       <img
-        src="https://api.iconify.design/mdi:linkedin.svg?color=%23000000"
+        src="https://api.iconify.design/mdi:linkedin.svg?color=%23ffffff"
         alt="LinkedIn"
         width="24"
         height="24"
@@ -69,7 +69,7 @@ function SocialIcon({ name }: { name: string }) {
     ),
     itchio: (
       <img
-        src="https://api.iconify.design/simple-icons:itchdotio.svg?color=%23000000"
+        src="https://api.iconify.design/simple-icons:itchdotio.svg?color=%23ffffff"
         alt="itch.io"
         width="24"
         height="24"

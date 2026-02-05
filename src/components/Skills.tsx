@@ -12,11 +12,19 @@ export default function Skills() {
           {resumeData.skills.map((category, index) => (
             <div key={index} className="card skills-card">
               <h3>{category.name}</h3>
-              <div className="skill-tags">
+              <div className="skill-bars">
                 {category.skills.map((skill, i) => (
-                  <span key={i} className="skill-tag">
-                    {skill}
-                  </span>
+                  <div key={i} className="skill-item">
+                    <div className="skill-header">
+                      <span className="skill-name">{skill.name}</span>
+                    </div>
+                    <div className="skill-bar">
+                      <div
+                        className="skill-progress"
+                        style={{ width: `${skill.level}%` }}
+                      />
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>

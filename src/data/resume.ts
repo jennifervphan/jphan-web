@@ -18,15 +18,29 @@ export interface Education {
   achievements?: string[];
 }
 
+export interface Skill {
+  name: string;
+  level: number; // 0-100 percentage
+}
+
 export interface SkillCategory {
   name: string;
-  skills: string[];
+  skills: Skill[];
 }
 
 export interface SocialLink {
   name: string;
   url: string;
   icon: string;
+}
+
+export interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  link?: string;
+  github?: string;
+  image?: string;
 }
 
 export interface ResumeData {
@@ -41,6 +55,7 @@ export interface ResumeData {
   experience: Experience[];
   education: Education[];
   skills: SkillCategory[];
+  projects: Project[];
 }
 
 export const resumeData: ResumeData = {
@@ -87,7 +102,7 @@ export const resumeData: ResumeData = {
       endDate: "May 2024",
       description: [
         "Built and maintained RESTful APIs serving 1M+ daily requests",
-        "Developed and maintained internal React application for managing charge point installations", 
+        "Developed and maintained internal React application for managing charge point installations",
         "Introduced unit and end-to-end tests as well as CI/CD pipelines, improving code quality and deployment speed",
         "Collaborated with product and design teams to deliver features on schedule",
       ],
@@ -95,33 +110,72 @@ export const resumeData: ResumeData = {
   ],
   education: [
     {
-      institution: "University Name",
-      degree: "Bachelor of Science",
-      field: "Computer Science",
-      startDate: "2013",
-      endDate: "2017",
+      institution: "Rhein Waal University of Applied Sciences",
+      degree: "Bachelor of Science  ",
+      field: "Environment and Energy Management",
+      startDate: "2012",
+      endDate: "2018",
       achievements: [
-        "Dean's List - 4 semesters",
-        "Senior project: Built a machine learning recommendation system",
+        "Thesis: Developed a testing method for quality and performance evaluation of Nickel Metal Hydride batteries",
+        "Senior project: Introduced Fairtrade products into Rhein Waal University of Applied Sciences",
       ],
     },
   ],
   skills: [
     {
       name: "Languages",
-      skills: ["TypeScript", "JavaScript"],
+      skills: [
+        { name: "TypeScript", level: 80 },
+        { name: "JavaScript", level: 80 },
+      ],
     },
     {
       name: "Frontend",
-      skills: ["React", "HTML/CSS"],
+      skills: [
+        { name: "React", level: 85 },
+        { name: "HTML/CSS", level: 85 },
+      ],
     },
     {
       name: "Backend",
-      skills: ["Node.js", "Express", "PostgreSQL", "GraphQL"],
+      skills: [
+        { name: "Node.js", level: 85 },
+        { name: "Express", level: 80 },
+        { name: "GraphQL", level: 70 },
+        { name: "PostgreSQL", level: 60 },
+      ],
     },
     {
       name: "Tools & Platforms",
-      skills: ["Git", "Docker", "AWS", "CI/CD"],
+      skills: [
+        { name: "Git", level: 90 },
+        { name: "Docker", level: 65 },
+        { name: "AWS", level: 70 },
+        { name: "CI/CD", level: 80 },
+      ],
+    },
+  ],
+  projects: [
+    {
+      title: "Zen Zombie Zoo",
+      description: "An idle game where you collect zombies to expand your zoo. Built with React and Vite for a smooth, responsive gaming experience.",
+      tags: ["React", "Vite", "Game Dev", "Idle Game"],
+      link: "https://zzz.jphan.org/",
+      github: "https://github.com/zen-zombie-zoo/zzz-web"
+
+    },
+    {
+      title: "Mummy escape",
+      description: "A pixel art game where you play as a mummy trying to escape a pyramid. Created with Aseprite and built with Phaser.js.",
+      tags: ["Phaser", "Pixel Art", "Aseprite"],
+      link: "https://irregular-medusa.itch.io/",
+      github: "https://github.com/NiklasEi/mummy-escape"
+    },
+    {
+      title: "Personal Portfolio",
+      description: "This website! Built with React and TypeScript, featuring a custom design and responsive layout.",
+      tags: ["React", "TypeScript", "CSS"],
+      github: "https://github.com/jennifervphan",
     },
   ],
 };

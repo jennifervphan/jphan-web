@@ -1,17 +1,17 @@
 /* CSS Custom Properties */
 :root {
   /* Colors */
-  --bg-primary: #0f1f1a;
-  --bg-secondary: #162b24;
-  --bg-tertiary: #1e3830;
-  --accent-1: #0099cc;
-  --accent-2: #e91e8c;
-  --accent-3: #8bc400;
-  --accent-gradient: linear-gradient(135deg, #00b4d8, #e91e8c, #8bc400);
-  --text-primary: #ffffff;
-  --text-secondary: #b8b8d0;
-  --text-muted: #8888a0;
-  --border-color: #2a4a40;
+  --bg-primary: #0a0a12;
+  --bg-secondary: #12121f;
+  --bg-tertiary: #1a1a2a;
+  --accent-1: #fca311;
+  --accent-2: #e63946;
+  --accent-3: #4cc9f0;
+  --accent-gradient: linear-gradient(135deg, #e63946, #fca311, #ffd93d, #6bcb77);
+  --text-primary: #fca311;
+  --text-secondary: #4cc9f0;
+  --text-muted: #e63946;
+  --border-color: #2a2a40;
 
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -125,7 +125,7 @@ a:hover {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 40px -10px rgba(0, 212, 255, 0.5);
+  box-shadow: 0 10px 40px -10px rgba(252, 163, 17, 0.6);
 }
 
 .btn-secondary {
@@ -151,7 +151,7 @@ a:hover {
 .card:hover {
   border-color: var(--accent-1);
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -20px rgba(0, 212, 255, 0.4);
+  box-shadow: 0 20px 40px -20px rgba(252, 163, 17, 0.5);
 }
 
 /* Animations */
