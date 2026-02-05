@@ -50,19 +50,6 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div className="contact-socials">
-            {resumeData.socials.map((social) => (
-              <a
-                key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary"
-              >
-                {social.name}
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </section>
